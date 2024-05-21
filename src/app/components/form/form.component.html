@@ -1,0 +1,9 @@
+<div class="search">
+    <div class="input">
+        <input type="number" [formControl]="number" />
+        <span *ngIf="number.invalid && (number.dirty || number.touched)">
+            {{ getErrorMessage() }}
+        </span>
+    </div>
+    <button [disabled]="number.invalid" (click)="calculate()">Calculate</button>
+</div>
